@@ -41,20 +41,35 @@
     vertical-align: middle;
   }
 
-  .progress-bar {
-  background-color: #34b7a7 !important;
-  height: 12px;
-  width: 0;
-  transition: width 0.6s ease-in-out;
+  /* Skills Section Fix */
+
+.skill {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.progress {
+  background: #f4f4f4;
+  border-radius: 20px;
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .progress-bar-wrap {
-  background: #f3f3f3;
+  background: #e0e0e0;
+  height: 100%;
   border-radius: 20px;
   overflow: hidden;
-  height: 10px;
-  margin-bottom: 20px;
 }
+
+.progress-bar {
+  background-color: #34b7a7; /* your theme color */
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+
 
 </style>
 
@@ -835,9 +850,16 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-</script>
 
-<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach(bar => {
+      const value = bar.getAttribute('aria-valuenow');
+      bar.style.width = value + '%';
+    });
+  });
+
+
   document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.querySelector('.mobile-nav-toggle');
     const navbar = document.querySelector('#navbar');
