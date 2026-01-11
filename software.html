@@ -33,49 +33,52 @@
     transition: 0.3s ease;
     text-transform: uppercase;
   }
-
   .btn-custom-resume:hover {
     background-color: #2aa092;
     color: #fff;
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(52, 183, 167, 0.3);
   }
-
   .btn-custom-resume i {
     font-size: 18px;
     vertical-align: middle;
   }
-
-  /* Skills Section Fix */
-
-.skill {
+/* Skills Section Fix */
+.skills-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.skill-card {
+  background: #ffffff;
+  border-left: 5px solid #34b7a7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+.skill-card h4 {
+  color: #34b7a7;
+  margin-bottom: 10px;
   font-weight: 600;
-  margin-bottom: 5px;
-  display: inline-block;
 }
-
-.progress {
-  background: #f4f4f4;
-  border-radius: 20px;
-  height: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
+.skill-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
 }
-
-.progress-bar-wrap {
-  background: #e0e0e0;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  background-color: #34b7a7; /* your theme color */
-  height: 100%;
-  transition: width 1s ease-in-out;
-}
-
-
 </style>
 
 </head>
@@ -219,7 +222,7 @@
         <br><br><br><br>
         <!-- /Resume Section -->
         <div class="text-center mt-4">
-          <a href="https://drive.google.com/uc?export=view&id=1UbPM2a8fxA1twhoaJ4JXYMCb_-kb55lT" 
+          <a href="https://drive.google.com/uc?export=view&id=1zjxC2SedADyUzYnByV-81__pbnknpg0o" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn btn-custom-resume">
@@ -318,8 +321,8 @@
         <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Contributed to real-world client and in-house projects, strengthening understanding of the Software Development Life Cycle (SDLC).</li>
         <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Designed and developed backend APIs and database schemas to enable efficient, secure, and scalable data handling.</li>
         <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Built, deployed, and maintained web applications on AWS and GCP, ensuring scalability, reliability, and high availability.</li>
-        <li><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Assisted the Project Manager with requirement analysis, task prioritization, and progress tracking, improving team coordination and delivery timelines.</li>
-        <li><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Actively participated in code reviews, applying best practices to improve code quality, performance, and maintainability.</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Assisted the Project Manager with requirement analysis, task prioritization, and progress tracking, improving team coordination and delivery timelines.</li>        
+        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: #34b7a7;"></i>Actively participated in code reviews, applying best practices to improve code quality, performance, and maintainability.</li>
       </ul>
     </div>
 
@@ -338,73 +341,62 @@
   </div><!-- End Section Title -->
 
     <div class="container px-4 px-md-5" data-aos="fade-up" data-aos-delay="100">
+      
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
 
+    <div class="skills-grid">
 
-      <div class="col-lg-6">
-
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">GCP (Compute Engine, App Engine, IAM, VPC) <span class="float-end">65%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:65%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
-
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">HTML <span class="float-end">95%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:95%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
-
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">CSS <span class="float-end">90%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:90%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
-
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">JavaScript <span class="float-end">75%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:75%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
-
+      <div class="skill-card">
+        <h4>Cloud & DevOps</h4>
+        <p>
+          AWS, GCP, EC2, Compute Engine, App Engine, Lambda, 
+          Cloud Storage, S3, IAM, VPC, RDS, DynamoDB,
+          CI/CD (Basic), Linux (Basic), Docker (Basic)
+        </p>
       </div>
 
-      <div class="col-lg-6">
+      <div class="skill-card">
+        <h4>Web Development</h4>
+        <p>
+          HTML, CSS, JavaScript, WordPress, Node.js, REST APIs
+        </p>
+      </div>
 
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">WordPress <span class="float-end">60%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:60%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
+      <div class="skill-card">
+        <h4>Programming Languages</h4>
+        <p>
+          Python
+        </p>
+      </div>
 
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">MongoDB <span class="float-end">70%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:70%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
+      <div class="skill-card">
+        <h4>Databases</h4>
+        <p>
+          MySQL, SQLite, MongoDB, phpMyAdmin
+        </p>
+      </div>
 
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">Python / Java / C / C++ <span class="float-end">80%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:80%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
+      <div class="skill-card">
+        <h4>Designing</h4>
+        <p>
+          UI/UX Designing, Graphic Designing, Web Designing, Branding Designing
+        </p>
+      </div>
 
-        <div class="mb-4">
-          <span class="d-block fw-bold mb-1">Android Studio / Git / Figma / Canva <span class="float-end">75%</span></span>
-          <div style="background:#e9ecef; height: 20px; border-radius:10px;">
-            <div style="width:75%; background-color:#34b7a7; height:100%; border-radius:10px;"></div>
-          </div>
-        </div>
-
+      <div class="skill-card">
+        <h4>Tools & Platforms</h4>
+        <p>
+          Git, GitHub, VS Code, Android Studio, 
+          Figma, Canva, Microsoft 365
+        </p>
       </div>
 
     </div>
+  </div>
+    
+
+    
   </div>
 
 </section><!-- /Skills Section -->
@@ -422,14 +414,14 @@
       <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="skill-box">
           <i class="bi bi-people"></i>
-          <h5>Teamwork</h5>
+          <h5>Teamwork & Team Collaboration</h5>
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
         <div class="skill-box">
           <i class="bi bi-chat-dots"></i>
-          <h5>Communication</h5>
+          <h5>Effective Communication & Presentation</h5>
         </div>
       </div>
 
@@ -457,7 +449,7 @@
       <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
         <div class="skill-box">
           <i class="bi bi-lightning"></i>
-          <h5>Fast Learner</h5>
+          <h5>Rapid Learner</h5>
         </div>
       </div>
 
@@ -582,7 +574,7 @@
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <ul class="list-group">
-      <li class="list-group-item">AWS Certified SysOps Administrator – Associate – Currently Preparing</li>
+      <li class="list-group-item">AWS Certified CloudOps Administrator – Associate – Currently Preparing</li>
       <li class="list-group-item">Google Cloud Associate Engineer - Course Completed</li>
       <li class="list-group-item">AWS Cloud Practitioner – Course Completed</li>
       <li class="list-group-item">Fundamentals of Cloud Computing</li>
@@ -606,94 +598,94 @@
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
       <!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.udemy.com/certificate/UC-b7f9f17b-37d4-4e62-926d-fa704e374308/" target="_blank">
-      <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-b7f9f17b-37d4-4e62-926d-fa704e374308.jpg" class="img-fluid" alt="Cloud Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Fundamentals of Cloud Computing</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.hackerrank.com/certificates/b7e163427a2d" target="_blank">
-      <img src="assets/img/software_engineer certificate.png" class="img-fluid" alt="Software Engineer Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Software Engineer</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.udemy.com/certificate/UC-0415d084-8071-4e65-bfc0-f0e1e23443b2/" target="_blank">
-      <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-0415d084-8071-4e65-bfc0-f0e1e23443b2.jpg" class="img-fluid" alt="Power BI Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Power BI Practical Guide</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.udemy.com/certificate/UC-3733f94b-b9bc-4b7a-b38f-e3806d179880/" target="_blank">
-      <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-3733f94b-b9bc-4b7a-b38f-e3806d179880.jpg" class="img-fluid" alt="Frontend Certificate">
-    </a>
-    <h5 class="mt-2 text-center">HTML, CSS, JavaScript for Modern UI/UX Developers</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.udemy.com/certificate/UC-5922da70-1dac-4c02-b10f-5225311a00cc/" target="_blank">
-      <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-5922da70-1dac-4c02-b10f-5225311a00cc.jpg" class="img-fluid" alt="Wordpress Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Figma to WordPress: Learn to Design and Build Website</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.udemy.com/certificate/UC-e01b92e7-ee0e-4236-92b3-5e47faecc991/" target="_blank">
-      <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-e01b92e7-ee0e-4236-92b3-5e47faecc991.jpg" class="img-fluid" alt="Android Studio Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Android App Development Basics with Java</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://coursera.org/verify/8137HBHAB9XP" target="_blank">
-      <img src="assets/img/CourseExcel.jpeg" class="img-fluid" alt="Data Analysis Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Intro to Data Analysis using Microsoft Excel</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://www.udemy.com/certificate/UC-a831bc50-fd7c-4b1e-aada-3843d1c5d7f0/" target="_blank">
-      <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-a831bc50-fd7c-4b1e-aada-3843d1c5d7f0.jpg" class="img-fluid" alt="Chatbot Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Chatbot for Beginners</h5>
-  </div>
-</div>
-
-<!-- Certificate Item -->
-<div class="col-lg-4 col-md-6">
-  <div class="certificate-card">
-    <a href="https://coursera.org/verify/PWXJ0UDPT9X1" target="_blank">
-      <img src="assets/img/Course.png" class="img-fluid"  alt="Microsoft Excel Certificate">
-    </a>
-    <h5 class="mt-2 text-center">Introduction to Microsoft Excel</h5>
-  </div>
-</div>
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.udemy.com/certificate/UC-b7f9f17b-37d4-4e62-926d-fa704e374308/" target="_blank">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-b7f9f17b-37d4-4e62-926d-fa704e374308.jpg" class="img-fluid" alt="Cloud Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Fundamentals of Cloud Computing</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.hackerrank.com/certificates/b7e163427a2d" target="_blank">
+            <img src="assets/img/software_engineer certificate.png" class="img-fluid" alt="Software Engineer Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Software Engineer</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.udemy.com/certificate/UC-0415d084-8071-4e65-bfc0-f0e1e23443b2/" target="_blank">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-0415d084-8071-4e65-bfc0-f0e1e23443b2.jpg" class="img-fluid" alt="Power BI Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Power BI Practical Guide</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.udemy.com/certificate/UC-3733f94b-b9bc-4b7a-b38f-e3806d179880/" target="_blank">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-3733f94b-b9bc-4b7a-b38f-e3806d179880.jpg" class="img-fluid" alt="Frontend Certificate">
+          </a>
+          <h5 class="mt-2 text-center">HTML, CSS, JavaScript for Modern UI/UX Developers</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.udemy.com/certificate/UC-5922da70-1dac-4c02-b10f-5225311a00cc/" target="_blank">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-5922da70-1dac-4c02-b10f-5225311a00cc.jpg" class="img-fluid" alt="Wordpress Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Figma to WordPress: Learn to Design and Build Website</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.udemy.com/certificate/UC-e01b92e7-ee0e-4236-92b3-5e47faecc991/" target="_blank">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-e01b92e7-ee0e-4236-92b3-5e47faecc991.jpg" class="img-fluid" alt="Android Studio Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Android App Development Basics with Java</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://coursera.org/verify/8137HBHAB9XP" target="_blank">
+            <img src="assets/img/CourseExcel.jpeg" class="img-fluid" alt="Data Analysis Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Intro to Data Analysis using Microsoft Excel</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://www.udemy.com/certificate/UC-a831bc50-fd7c-4b1e-aada-3843d1c5d7f0/" target="_blank">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-a831bc50-fd7c-4b1e-aada-3843d1c5d7f0.jpg" class="img-fluid" alt="Chatbot Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Chatbot for Beginners</h5>
+        </div>
+      </div>
+      
+      <!-- Certificate Item -->
+      <div class="col-lg-4 col-md-6">
+        <div class="certificate-card">
+          <a href="https://coursera.org/verify/PWXJ0UDPT9X1" target="_blank">
+            <img src="assets/img/Course.png" class="img-fluid"  alt="Microsoft Excel Certificate">
+          </a>
+          <h5 class="mt-2 text-center">Introduction to Microsoft Excel</h5>
+        </div>
+      </div>
 
       <!-- Add more by duplicating -->
 
@@ -711,33 +703,46 @@
   <div class="container">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
-<section id="research" class="portfolio-section section-bg py-5">
-  <div class="container" data-aos="fade-up">
-    
-    <!-- Section Header -->
-    <div class="section-header text-center mb-5">
-      <h2 class="mb-3 position-relative d-inline-block">
-        <span style="border-bottom: 4px solid #34b7a7; padding-bottom: 5px;">Research Publication</span>
-      </h2>
-      <p class="text-muted fst-italic">Significant academic contribution in the field of AI-driven healthcare</p>
-    </div>
-
-    <!-- Research Entry Card -->
-    <div class="bg-white shadow-lg p-5 rounded-4" style="border-left: 4px solid #34b7a7;" data-aos="fade-up" data-aos-delay="150">
-      <h4 class="fw-bold text-dark mb-3">
-        <i class="bi bi-journal-bookmark-fill" style="color: #34b7a7; margin-right: 10px;"></i>
-        Predictive Analysis of Chronic Kidney Disease using Hybrid Model
-      </h4>
-      <ul class="list-unstyled text-muted ps-3">
-        <li class="mb-2"><strong>Status:</strong> Accepted for publication in <em>SmartCom 2025</em> (Springer LNNS)</li>
-        <li class="mb-2"><strong>Presentation:</strong> January 29, 2025 at Crowne Plaza, Pune</li>
-        <li class="mb-2"><strong>Expected Publication:</strong> September 2025 on SpringerLink</li>
-        <li><em>Indexed in Scopus and Google Scholar (post-publication)</em></li>
-      </ul>
-    </div>
-
-  </div>
-</section>
+      <section id="research" class="portfolio-section section-bg py-5">
+        <div class="container" data-aos="fade-up">
+          
+          <!-- Section Header -->
+          <div class="section-header text-center mb-5">
+            <h2 class="mb-3 position-relative d-inline-block">
+              <span style="border-bottom: 4px solid #34b7a7; padding-bottom: 5px;">Research Publication</span>
+            </h2>
+            <p class="text-muted fst-italic">Significant academic contribution in the field of AI-driven healthcare</p>
+          </div>
+      
+          <!-- Research Entry Card -->
+          <!-- Paper 1: Springer publication -->
+          <div class="bg-white shadow-lg p-5 rounded-4 mb-4" style="border-left: 4px solid #34b7a7;" data-aos="fade-up" data-aos-delay="150">
+            <h4 class="fw-bold text-dark mb-3">
+              <i class="bi bi-journal-bookmark-fill" style="color: #34b7a7; margin-right: 10px;"></i>
+              Prediction of Chronic Kidney Disease (CKD) Using Hybrid Machine Learning Model
+            </h4>
+            <ul class="list-unstyled text-muted ps-3">
+              <li class="mb-2"><strong>Publication:</strong> SmartCom 2025, Lecture Notes in Networks and Systems (Springer)</li>
+              <li class="mb-2"><strong>Authors:</strong> S. Arun Kumar, S. Niveditha, Kanchagar Belagal Vikas, C. Varshini & H. U. Hemalatha</li>
+              <li class="mb-2"><strong>Overview:</strong> Developed a hybrid machine learning model combining Random Forest & LightGBM for CKD prediction and created a tool for real-time clinical use. :contentReference[oaicite:0]{index=0}</li>
+              <li class="mb-2"><strong>Online Access:</strong> <a href="https://link.springer.com/chapter/10.1007/978-981-96-7511-1_25" target="_blank">View on Springer</a></li>
+            </ul>
+          </div>
+          
+          <!-- Paper 2: Zenodo publication -->
+          <div class="bg-white shadow-lg p-5 rounded-4 mb-4" style="border-left: 4px solid #34b7a7;" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="fw-bold text-dark mb-3">
+              <i class="bi bi-journal-bookmark-fill" style="color: #34b7a7; margin-right: 10px;"></i>
+              AI‑Driven Emotional and Cognitive Well‑Being System for Elderly Care: A Multi‑Modal Biofeedback Platform for Real‑Time Monitoring and Support
+            </h4>
+            <ul class="list-unstyled text-muted ps-3">
+              <li class="mb-2"><strong>Publication / Link:</strong> <a href="https://zenodo.org/records/18198378" target="_blank">Zenodo Record</a></li>
+              <li class="mb-2"><strong>Overview:</strong> Designed a multi‑modal biofeedback system to monitor and support elderly emotional and cognitive well‑being in real time combining physiological and AI‑based analysis (record available online on Zenodo).</li>
+              <li><strong>Status:</strong> Published and accessible online</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- Achievement Card -->
       <div class="col-lg-4 col-md-6">
@@ -859,7 +864,7 @@
 
   <footer class="bg-light py-4">
     <div class="container text-center">
-      <small>© 2025 Vikas Kanchagar Belagal • Designed with Bootstrap</small>
+      <small>© 2026 Vikas Kanchagar Belagal • Designed with Bootstrap</small>
     </div>
   </footer>
   <!-- Scroll Top -->
